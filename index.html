@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Syed Anees Ul Hasnain | Premium Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* =======================
+GLOBAL
+======================= */
 
 *{
 margin:0;
@@ -24,51 +27,53 @@ font-family:'Inter',sans-serif;
 background:#020617;
 color:#fff;
 overflow-x:hidden;
+line-height:1.6;
 }
 
 body::before{
 content:'';
 position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
+inset:0;
+z-index:-1;
 background:
 radial-gradient(circle at 20% 20%,rgba(34,211,238,.12),transparent 25%),
 radial-gradient(circle at 80% 30%,rgba(59,130,246,.10),transparent 25%),
 radial-gradient(circle at 50% 80%,rgba(168,85,247,.08),transparent 25%);
-z-index:-1;
 }
 
 .container{
 max-width:1250px;
 margin:auto;
-padding:0 25px;
+padding:0 24px;
 }
 
-/* NAVBAR */
+/* =======================
+NAVBAR
+======================= */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 0;
+padding:22px 0;
 position:sticky;
 top:0;
-backdrop-filter:blur(10px);
-background:rgba(2,6,23,.75);
 z-index:999;
+background:rgba(2,6,23,.78);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .logo{
 font-size:24px;
 font-weight:800;
 color:#22d3ee;
+letter-spacing:.5px;
 }
 
 nav ul{
 display:flex;
-gap:20px;
+gap:22px;
 list-style:none;
 }
 
@@ -76,6 +81,7 @@ nav a{
 text-decoration:none;
 color:#fff;
 font-weight:600;
+font-size:15px;
 transition:.3s;
 }
 
@@ -83,7 +89,9 @@ nav a:hover{
 color:#22d3ee;
 }
 
-/* HERO */
+/* =======================
+HERO
+======================= */
 
 .hero{
 min-height:100vh;
@@ -91,38 +99,26 @@ display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
 gap:50px;
-padding:50px 0;
-}
-
-.hero-img{
-text-align:center;
-}
-
-.hero-img img{
-width:350px;
-max-width:100%;
-border-radius:35px;
-border:3px solid #22d3ee;
-box-shadow:0 30px 80px rgba(34,211,238,.25);
+padding:40px 0;
 }
 
 .tag{
 display:inline-block;
 padding:10px 18px;
-border:1px solid rgba(255,255,255,.12);
 border-radius:30px;
+border:1px solid rgba(255,255,255,.10);
 color:#22d3ee;
-margin-bottom:20px;
-font-size:14px;
+font-size:13px;
 font-weight:700;
 letter-spacing:2px;
+margin-bottom:18px;
 }
 
 .hero h1{
 font-size:64px;
 line-height:1.1;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .hero h1 span{
@@ -130,24 +126,26 @@ color:#22d3ee;
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 color:#cbd5e1;
-line-height:1.8;
-margin-bottom:30px;
+margin-bottom:28px;
+max-width:620px;
 }
 
 .btns{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:14px;
 }
 
 .btn{
-padding:15px 28px;
+padding:14px 24px;
 border-radius:14px;
 text-decoration:none;
 font-weight:700;
+font-size:15px;
 transition:.3s;
+text-align:center;
 }
 
 .primary{
@@ -157,7 +155,7 @@ color:#000;
 
 .primary:hover{
 transform:translateY(-4px);
-box-shadow:0 15px 35px rgba(34,211,238,.35);
+box-shadow:0 15px 35px rgba(34,211,238,.30);
 }
 
 .secondary{
@@ -169,62 +167,88 @@ color:#fff;
 border-color:#22d3ee;
 }
 
-/* SECTIONS */
+.hero-img{
+text-align:center;
+}
+
+.hero-img img{
+width:360px;
+max-width:100%;
+border-radius:30px;
+border:3px solid #22d3ee;
+box-shadow:0 25px 70px rgba(34,211,238,.25);
+}
+
+/* =======================
+SECTIONS
+======================= */
 
 section{
-padding:90px 0;
+padding:85px 0;
 }
 
 .section-title{
 font-size:42px;
-margin-bottom:20px;
 font-weight:800;
+margin-bottom:18px;
 }
 
 .section-sub{
+font-size:17px;
 color:#94a3b8;
-max-width:700px;
-line-height:1.8;
-margin-bottom:35px;
+max-width:760px;
 }
+
+/* =======================
+GRID
+======================= */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
+gap:24px;
+margin-top:28px;
 }
 
-/* CARDS */
+/* =======================
+CARD
+======================= */
 
 .card{
-background:rgba(15,23,42,.75);
+background:rgba(15,23,42,.78);
 border:1px solid rgba(255,255,255,.06);
-padding:28px;
-border-radius:24px;
+padding:26px;
+border-radius:22px;
 backdrop-filter:blur(10px);
 transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 border-color:#22d3ee;
 box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
 .skill{
 text-align:center;
-font-size:18px;
 font-weight:700;
+font-size:17px;
 }
 
-/* PROJECT */
+/* =======================
+PROJECTS
+======================= */
+
+.project{
+text-align:center;
+}
 
 .project img{
-width:85px;
-height:85px;
-border-radius:20px;
-margin-bottom:18px;
+width:82px;
+height:82px;
+border-radius:18px;
 object-fit:cover;
+margin-bottom:16px;
 }
 
 .project h3{
@@ -233,24 +257,26 @@ margin-bottom:10px;
 }
 
 .project p{
+font-size:15px;
 color:#cbd5e1;
 margin-bottom:20px;
-line-height:1.7;
 }
 
-/* CONTACT */
+/* =======================
+CONTACT
+======================= */
 
 .contact-box{
 text-align:center;
-padding:45px;
+padding:44px;
+border-radius:24px;
 background:linear-gradient(135deg,#0f172a,#111827);
-border-radius:28px;
 border:1px solid rgba(255,255,255,.06);
 }
 
 .contact-box h2{
 font-size:38px;
-margin-bottom:15px;
+margin-bottom:14px;
 }
 
 .contact-box p{
@@ -258,57 +284,197 @@ color:#cbd5e1;
 margin:10px 0;
 }
 
-/* FOOTER */
+/* =======================
+FOOTER
+======================= */
 
 footer{
-padding:30px 0;
+padding:28px 0;
+margin-top:45px;
 text-align:center;
+font-size:14px;
 color:#64748b;
-border-top:1px solid rgba(255,255,255,.06);
-margin-top:50px;
+border-top:1px solid rgba(255,255,255,.05);
 }
 
-/* MOBILE */
+/* ==================================
+RESPONSIVE 767px
+================================== */
 
-@media(max-width:980px){
+@media (max-width:767px){
 
-.hero{
-grid-template-columns:1fr;
-text-align:center;
+.container{
+padding:0 16px;
 }
 
-.hero h1{
-font-size:48px;
-}
-
-.btns{
-justify-content:center;
-}
+/* nav */
 
 nav{
 flex-direction:column;
-gap:15px;
+gap:14px;
+padding:16px 0;
+position:relative;
+}
+
+.logo{
+font-size:22px;
+text-align:center;
 }
 
 nav ul{
 flex-wrap:wrap;
 justify-content:center;
+gap:12px;
 }
 
+nav a{
+font-size:14px;
 }
 
-@media(max-width:600px){
+/* hero */
 
-.hero h1{
-font-size:38px;
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+gap:32px;
+padding:34px 0 10px;
+min-height:auto;
 }
 
-.section-title{
-font-size:32px;
+.hero-img{
+order:-1;
 }
 
 .hero-img img{
-width:260px;
+width:240px;
+border-radius:24px;
+}
+
+.hero h1{
+font-size:36px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:16px;
+margin:0 auto 24px;
+}
+
+.tag{
+font-size:12px;
+padding:8px 14px;
+letter-spacing:1px;
+}
+
+.btns{
+justify-content:center;
+gap:12px;
+}
+
+.btn{
+width:100%;
+max-width:280px;
+font-size:15px;
+padding:14px 16px;
+}
+
+/* sections */
+
+section{
+padding:65px 0;
+}
+
+.section-title{
+font-size:30px;
+text-align:center;
+line-height:1.2;
+}
+
+.section-sub{
+font-size:15px;
+text-align:center;
+}
+
+/* grid */
+
+.grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+/* cards */
+
+.card{
+padding:22px;
+border-radius:20px;
+}
+
+/* projects */
+
+.project img{
+width:72px;
+height:72px;
+}
+
+.project h3{
+font-size:22px;
+}
+
+.project p{
+font-size:15px;
+}
+
+/* contact */
+
+.contact-box{
+padding:28px 18px;
+}
+
+.contact-box h2{
+font-size:28px;
+line-height:1.2;
+}
+
+.contact-box p{
+font-size:15px;
+word-break:break-word;
+}
+
+/* footer */
+
+footer{
+font-size:13px;
+line-height:1.6;
+margin-top:25px;
+}
+
+}
+
+/* ==================================
+EXTRA SMALL 480px
+================================== */
+
+@media (max-width:480px){
+
+.hero h1{
+font-size:30px;
+}
+
+.hero-img img{
+width:210px;
+}
+
+.section-title{
+font-size:26px;
+}
+
+.btn{
+max-width:100%;
+font-size:14px;
+}
+
+.card{
+padding:18px;
 }
 
 }
@@ -358,20 +524,34 @@ I’m Syed Anees Ul Hasnain — Android Developer focused on world-class mobile 
 </div>
 
 <div class="hero-img">
-<img src="profile.png">
+<img src="profile.png" alt="Profile">
 </div>
 
-</section>
-
-<!-- ABOUT -->
+<!-- ABOUT SECTION replace karo is code se -->
 
 <section id="about">
 
 <h2 class="section-title">About Me</h2>
 
+<div class="about-wrap">
+
+<div class="about-img">
+<img src="about.png" alt="About Anees">
+</div>
+
+<div class="about-content">
+
 <p class="section-sub">
 Computer Science graduate passionate about creating useful mobile apps and business solutions. Experienced in Java, Kotlin, Firebase, APIs, monetization, growth strategy, branding, and Play Store optimization.
 </p>
+
+<p class="section-sub">
+I focus on building premium Android apps, modern UI designs, scalable products, and strong digital brands for global opportunities.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -409,45 +589,24 @@ Computer Science graduate passionate about creating useful mobile apps and busin
 <div class="grid">
 
 <div class="card project">
-
-<img src="ledger.png">
-
+<img src="ledger.png" alt="Ledger">
 <h3>Digital Ledger</h3>
-
-<p>
-Business ledger app for freelancers and companies with client management, reports and transaction history.
-</p>
-
+<p>Business ledger app for freelancers and companies with client management, reports and transaction history.</p>
 <a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.digitalledger" target="_blank" class="btn primary">View App</a>
-
 </div>
 
 <div class="card project">
-
-<img src="status.png">
-
+<img src="status.png" alt="Status Saver">
 <h3>Status Saver</h3>
-
-<p>
-Modern WhatsApp status saver app with fast downloads, account switching and elegant UI.
-</p>
-
+<p>Modern WhatsApp status saver app with fast downloads, account switching and elegant UI.</p>
 <a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.statussaver" target="_blank" class="btn primary">View App</a>
-
 </div>
 
 <div class="card project">
-
-<img src="game.png">
-
+<img src="game.png" alt="Game">
 <h3>Tap The Model</h3>
-
-<p>
-Fun and engaging mobile game designed for casual players with interactive gameplay.
-</p>
-
+<p>Fun and engaging mobile game designed for casual players with interactive gameplay.</p>
 <a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.simplegame" target="_blank" class="btn primary">Play Game</a>
-
 </div>
 
 </div>
@@ -463,12 +622,10 @@ Fun and engaging mobile game designed for casual players with interactive gamepl
 <h2>Let's Build Something Great</h2>
 
 <p>Email: aneesulhussnain512@gmail.com</p>
-
 <p>Location: Narowal, Pakistan</p>
-
 <p>LinkedIn: www.linkedin.com/in/syedaneesulhussnain</p>
 
-<div class="btns" style="justify-content:center;margin-top:25px;">
+<div class="btns" style="justify-content:center;margin-top:22px;">
 
 <a href="mailto:aneesulhussnain512@gmail.com" class="btn primary">Email Me</a>
 
