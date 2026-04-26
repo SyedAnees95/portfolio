@@ -6,8 +6,6 @@
 
 <title>Syed Anees Ul Hasnain | Premium Portfolio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -26,6 +24,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
+/* BACKGROUND EFFECT */
 body::before{
 content:'';
 position:fixed;
@@ -94,16 +93,17 @@ gap:50px;
 padding:50px 0;
 }
 
-.hero-img{
-text-align:center;
-}
-
 .hero-img img{
 width:350px;
-max-width:100%;
 border-radius:35px;
 border:3px solid #22d3ee;
 box-shadow:0 30px 80px rgba(34,211,238,.25);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
 }
 
 .tag{
@@ -120,31 +120,20 @@ letter-spacing:2px;
 
 .hero h1{
 font-size:64px;
-line-height:1.1;
 font-weight:800;
 margin-bottom:20px;
 }
 
-.hero h1 span{
-color:#22d3ee;
-}
+.hero h1 span{color:#22d3ee;}
 
 .hero p{
-font-size:19px;
 color:#cbd5e1;
-line-height:1.8;
 margin-bottom:30px;
 }
 
-.btns{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-}
-
 .btn{
-padding:15px 28px;
-border-radius:14px;
+padding:14px 26px;
+border-radius:12px;
 text-decoration:none;
 font-weight:700;
 transition:.3s;
@@ -157,7 +146,7 @@ color:#000;
 
 .primary:hover{
 transform:translateY(-4px);
-box-shadow:0 15px 35px rgba(34,211,238,.35);
+box-shadow:0 10px 30px rgba(34,211,238,.35);
 }
 
 .secondary{
@@ -165,151 +154,141 @@ border:1px solid #334155;
 color:#fff;
 }
 
-.secondary:hover{
-border-color:#22d3ee;
+/* ===== PREMIUM ABOUT ===== */
+
+.about-wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-top:40px;
 }
 
-/* SECTIONS */
+.about-img{
+position:relative;
+text-align:center;
+}
 
-section{
-padding:90px 0;
+.about-img img{
+width:320px;
+border-radius:30px;
+border:2px solid rgba(34,211,238,.4);
+backdrop-filter:blur(10px);
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+transition:.5s;
+}
+
+.about-img:hover img{
+transform:scale(1.05) rotate(-1deg);
+box-shadow:0 30px 80px rgba(34,211,238,.3);
+}
+
+/* Glow effect */
+.about-img::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:linear-gradient(120deg,transparent,#22d3ee,transparent);
+opacity:.2;
+filter:blur(40px);
+z-index:-1;
+}
+
+/* TEXT GLASS CARD */
+
+.about-content{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+transition:.4s;
+}
+
+.about-content:hover{
+transform:translateY(-8px);
+border-color:#22d3ee;
 }
 
 .section-title{
 font-size:42px;
-margin-bottom:20px;
 font-weight:800;
+margin-bottom:10px;
 }
 
 .section-sub{
 color:#94a3b8;
-max-width:700px;
 line-height:1.8;
-margin-bottom:35px;
+margin-bottom:20px;
 }
+
+/* SKILLS */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-/* CARDS */
-
 .card{
-background:rgba(15,23,42,.75);
-border:1px solid rgba(255,255,255,.06);
-padding:28px;
-border-radius:24px;
-backdrop-filter:blur(10px);
-transition:.35s;
+background:rgba(15,23,42,.7);
+padding:25px;
+border-radius:20px;
+transition:.3s;
+text-align:center;
 }
 
 .card:hover{
-transform:translateY(-10px);
-border-color:#22d3ee;
-box-shadow:0 20px 40px rgba(0,0,0,.35);
-}
-
-.skill{
-text-align:center;
-font-size:18px;
-font-weight:700;
+transform:translateY(-8px);
+border:1px solid #22d3ee;
 }
 
 /* PROJECT */
 
 .project img{
-width:85px;
-height:85px;
-border-radius:20px;
-margin-bottom:18px;
-object-fit:cover;
+width:80px;
+margin-bottom:15px;
 }
 
 .project h3{
-font-size:24px;
 margin-bottom:10px;
-}
-
-.project p{
-color:#cbd5e1;
-margin-bottom:20px;
-line-height:1.7;
 }
 
 /* CONTACT */
 
 .contact-box{
 text-align:center;
-padding:45px;
+padding:40px;
+border-radius:25px;
 background:linear-gradient(135deg,#0f172a,#111827);
-border-radius:28px;
-border:1px solid rgba(255,255,255,.06);
-}
-
-.contact-box h2{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.contact-box p{
-color:#cbd5e1;
-margin:10px 0;
 }
 
 /* FOOTER */
 
 footer{
-padding:30px 0;
 text-align:center;
-color:#64748b;
-border-top:1px solid rgba(255,255,255,.06);
 margin-top:50px;
+color:#64748b;
 }
 
 /* MOBILE */
 
-@media(max-width:980px){
+@media(max-width:900px){
 
 .hero{
 grid-template-columns:1fr;
 text-align:center;
 }
 
-.hero h1{
-font-size:48px;
+.about-wrap{
+grid-template-columns:1fr;
+text-align:center;
 }
 
-.btns{
-justify-content:center;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:38px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.hero-img img{
-width:260px;
-}
+.hero h1{font-size:40px;}
 
 }
 
@@ -322,7 +301,6 @@ width:260px;
 
 <nav>
 <div class="logo">MR ANEES PORTFOLIO</div>
-
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -336,25 +314,11 @@ width:260px;
 <section class="hero">
 
 <div>
-
-<div class="tag">ANDROID DEVELOPER • ENTREPRENEUR</div>
-
-<h1>Building <span>Premium Apps</span> & Digital Solutions</h1>
-
-<p>
-I’m Syed Anees Ul Hasnain — Android Developer focused on world-class mobile apps, UI/UX design, Google Play publishing, and scalable digital products.
-</p>
-
-<div class="btns">
+<div class="tag">ANDROID DEVELOPER</div>
+<h1>Building <span>Premium Apps</span></h1>
+<p>I create modern Android apps with powerful UI and performance.</p>
 
 <a href="#projects" class="btn primary">View Projects</a>
-
-<a href="https://www.linkedin.com/in/syedaneesulhussnain" target="_blank" class="btn secondary">LinkedIn</a>
-
-<a href="#contact" class="btn secondary">Hire Me</a>
-
-</div>
-
 </div>
 
 <div class="hero-img">
@@ -365,8 +329,6 @@ I’m Syed Anees Ul Hasnain — Android Developer focused on world-class mobile 
 
 <!-- ABOUT -->
 
-<!-- ABOUT SECTION replace karo is code se -->
-
 <section id="about">
 
 <h2 class="section-title">About Me</h2>
@@ -374,17 +336,17 @@ I’m Syed Anees Ul Hasnain — Android Developer focused on world-class mobile 
 <div class="about-wrap">
 
 <div class="about-img">
-<img src="anees.png" alt="About Anees">
+<img src="anees.png" alt="Anees">
 </div>
 
 <div class="about-content">
 
 <p class="section-sub">
-Computer Science graduate passionate about creating useful mobile apps and business solutions. Experienced in Java, Kotlin, Firebase, APIs, monetization, growth strategy, branding, and Play Store optimization.
+Computer Science graduate passionate about building powerful Android apps and digital businesses.
 </p>
 
 <p class="section-sub">
-I focus on building premium Android apps, modern UI designs, scalable products, and strong digital brands for global opportunities.
+Focused on UI/UX, Firebase, APIs, monetization, and scaling apps globally.
 </p>
 
 </div>
@@ -397,22 +359,14 @@ I focus on building premium Android apps, modern UI designs, scalable products, 
 
 <section id="skills">
 
-<h2 class="section-title">Elite Skills</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="grid">
 
-<div class="card skill">Java</div>
-<div class="card skill">Kotlin</div>
-<div class="card skill">Android Studio</div>
-<div class="card skill">Firebase</div>
-<div class="card skill">SQLite</div>
-<div class="card skill">Material UI</div>
-<div class="card skill">Play Console</div>
-<div class="card skill">Digital Marketing</div>
-<div class="card skill">Photography</div>
-<div class="card skill">Canva Design</div>
-<div class="card skill">Video Editing</div>
-<div class="card skill">Brand Strategy</div>
+<div class="card">Java</div>
+<div class="card">Kotlin</div>
+<div class="card">Firebase</div>
+<div class="card">Android Studio</div>
 
 </div>
 
@@ -422,50 +376,18 @@ I focus on building premium Android apps, modern UI designs, scalable products, 
 
 <section id="projects">
 
-<h2 class="section-title">Published Projects</h2>
+<h2 class="section-title">Projects</h2>
 
 <div class="grid">
 
 <div class="card project">
-
 <img src="ledger.png">
-
 <h3>Digital Ledger</h3>
-
-<p>
-Business ledger app for freelancers and companies with client management, reports and transaction history.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.digitalledger" target="_blank" class="btn primary">View App</a>
-
 </div>
 
 <div class="card project">
-
 <img src="status.png">
-
 <h3>Status Saver</h3>
-
-<p>
-Modern WhatsApp status saver app with fast downloads, account switching and elegant UI.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.statussaver" target="_blank" class="btn primary">View App</a>
-
-</div>
-
-<div class="card project">
-
-<img src="game.png">
-
-<h3>Tap The Model</h3>
-
-<p>
-Fun and engaging mobile game designed for casual players with interactive gameplay.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.simplegame" target="_blank" class="btn primary">Play Game</a>
-
 </div>
 
 </div>
@@ -477,32 +399,17 @@ Fun and engaging mobile game designed for casual players with interactive gamepl
 <section id="contact">
 
 <div class="contact-box">
-
-<h2>Let's Build Something Great</h2>
-
+<h2>Contact Me</h2>
 <p>Email: aneesulhussnain512@gmail.com</p>
-
-<p>Location: Narowal, Pakistan</p>
-
-<p>LinkedIn: www.linkedin.com/in/syedaneesulhussnain</p>
-
-<div class="btns" style="justify-content:center;margin-top:25px;">
-
-<a href="mailto:aneesulhussnain512@gmail.com" class="btn primary">Email Me</a>
-
-<a href="https://www.linkedin.com/in/syedaneesulhussnain" target="_blank" class="btn secondary">LinkedIn</a>
-
-</div>
-
 </div>
 
 </section>
 
 <footer>
-© 2026 Syed Anees Ul Hasnain • Crafted For Global Opportunities
+© 2026 Syed Anees
 </footer>
 
 </div>
 
 </body>
-</html>    mojaa khud update kar kaa doo complete file  is ko 767px pe Responsive kr k do, or Maintain kr k do
+</html>
