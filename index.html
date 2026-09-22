@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Syed Anees Ul Hasnain | Premium Portfolio</title>
+<title>Syed Anees Ul Hasnain | Android Developer Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -38,6 +39,7 @@ radial-gradient(circle at 20% 20%,rgba(34,211,238,.12),transparent 25%),
 radial-gradient(circle at 80% 30%,rgba(59,130,246,.10),transparent 25%),
 radial-gradient(circle at 50% 80%,rgba(168,85,247,.08),transparent 25%);
 z-index:-1;
+pointer-events:none;
 }
 
 .container{
@@ -46,7 +48,7 @@ margin:auto;
 padding:0 25px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 nav{
 display:flex;
@@ -55,27 +57,30 @@ align-items:center;
 padding:25px 0;
 position:sticky;
 top:0;
-backdrop-filter:blur(10px);
-background:rgba(2,6,23,.75);
+backdrop-filter:blur(15px);
+background:rgba(2,6,23,.82);
 z-index:999;
+border-bottom:1px solid rgba(255,255,255,.04);
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 font-weight:800;
 color:#22d3ee;
+letter-spacing:.5px;
 }
 
 nav ul{
 display:flex;
-gap:20px;
+gap:25px;
 list-style:none;
 }
 
 nav a{
 text-decoration:none;
-color:#fff;
+color:#cbd5e1;
 font-weight:600;
+font-size:14px;
 transition:.3s;
 }
 
@@ -83,14 +88,14 @@ nav a:hover{
 color:#22d3ee;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-min-height:100vh;
+min-height:calc(100vh - 90px);
 display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
-gap:50px;
+gap:60px;
 padding:50px 0;
 }
 
@@ -103,24 +108,27 @@ width:350px;
 max-width:100%;
 border-radius:35px;
 border:3px solid #22d3ee;
-box-shadow:0 30px 80px rgba(34,211,238,.25);
+box-shadow:
+0 30px 80px rgba(34,211,238,.25),
+0 0 50px rgba(34,211,238,.08);
 }
 
 .tag{
 display:inline-block;
 padding:10px 18px;
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(34,211,238,.25);
+background:rgba(34,211,238,.05);
 border-radius:30px;
 color:#22d3ee;
 margin-bottom:20px;
-font-size:14px;
+font-size:13px;
 font-weight:700;
 letter-spacing:2px;
 }
 
 .hero h1{
 font-size:64px;
-line-height:1.1;
+line-height:1.08;
 font-weight:800;
 margin-bottom:20px;
 }
@@ -130,10 +138,11 @@ color:#22d3ee;
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 color:#cbd5e1;
 line-height:1.8;
 margin-bottom:30px;
+max-width:650px;
 }
 
 .btns{
@@ -143,7 +152,8 @@ gap:15px;
 }
 
 .btn{
-padding:15px 28px;
+display:inline-block;
+padding:14px 26px;
 border-radius:14px;
 text-decoration:none;
 font-weight:700;
@@ -167,9 +177,11 @@ color:#fff;
 
 .secondary:hover{
 border-color:#22d3ee;
+color:#22d3ee;
+transform:translateY(-3px);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
 padding:90px 0;
@@ -185,134 +197,10 @@ font-weight:800;
 color:#94a3b8;
 max-width:700px;
 line-height:1.8;
-margin-bottom:35px;
+margin-bottom:25px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-}
-
-/* CARDS */
-
-.card{
-background:rgba(15,23,42,.75);
-border:1px solid rgba(255,255,255,.06);
-padding:28px;
-border-radius:24px;
-backdrop-filter:blur(10px);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#22d3ee;
-box-shadow:0 20px 40px rgba(0,0,0,.35);
-}
-
-.skill{
-text-align:center;
-font-size:18px;
-font-weight:700;
-}
-
-/* PROJECT */
-
-.project img{
-width:85px;
-height:85px;
-border-radius:20px;
-margin-bottom:18px;
-object-fit:cover;
-}
-
-.project h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.project p{
-color:#cbd5e1;
-margin-bottom:20px;
-line-height:1.7;
-}
-
-/* CONTACT */
-
-.contact-box{
-text-align:center;
-padding:45px;
-background:linear-gradient(135deg,#0f172a,#111827);
-border-radius:28px;
-border:1px solid rgba(255,255,255,.06);
-}
-
-.contact-box h2{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.contact-box p{
-color:#cbd5e1;
-margin:10px 0;
-}
-
-/* FOOTER */
-
-footer{
-padding:30px 0;
-text-align:center;
-color:#64748b;
-border-top:1px solid rgba(255,255,255,.06);
-margin-top:50px;
-}
-
-/* MOBILE */
-
-@media(max-width:980px){
-
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.hero h1{
-font-size:48px;
-}
-
-.btns{
-justify-content:center;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:38px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.hero-img img{
-width:260px;
-}
-
-}
-/* ===== PREMIUM ABOUT (NO BREAK) ===== */
+/* ================= ABOUT ================= */
 
 .about-wrap{
 display:grid;
@@ -355,86 +243,491 @@ transform:translateY(-6px);
 border-color:#22d3ee;
 }
 
-/* MOBILE FIX */
+/* ================= GRID ================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+background:rgba(15,23,42,.75);
+border:1px solid rgba(255,255,255,.06);
+padding:28px;
+border-radius:24px;
+backdrop-filter:blur(10px);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#22d3ee;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.skill{
+text-align:center;
+font-size:18px;
+font-weight:700;
+}
+
+/* ================= PREMIUM PROJECTS ================= */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+margin-top:40px;
+}
+
+.project-card{
+position:relative;
+display:flex;
+flex-direction:column;
+height:100%;
+min-height:470px;
+padding:26px;
+background:linear-gradient(145deg,rgba(15,23,42,.95),rgba(15,23,42,.70));
+border:1px solid rgba(255,255,255,.07);
+border-radius:26px;
+backdrop-filter:blur(14px);
+overflow:hidden;
+transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;
+}
+
+.project-card::before{
+content:'';
+position:absolute;
+width:220px;
+height:220px;
+top:-110px;
+right:-110px;
+background:rgba(34,211,238,.08);
+border-radius:50%;
+transition:.5s ease;
+pointer-events:none;
+}
+
+.project-card::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.04),transparent 70%);
+transform:translateX(-100%);
+transition:.7s ease;
+pointer-events:none;
+}
+
+.project-card:hover{
+transform:translateY(-12px);
+border-color:rgba(34,211,238,.55);
+box-shadow:0 25px 60px rgba(0,0,0,.45),0 0 35px rgba(34,211,238,.10);
+}
+
+.project-card:hover::before{transform:scale(1.5);background:rgba(34,211,238,.12);}
+.project-card:hover::after{transform:translateX(100%);}
+
+.project-top{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:15px;
+margin-bottom:22px;
+}
+
+.project-icon{
+width:82px;
+height:82px;
+border-radius:21px;
+object-fit:cover;
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 12px 30px rgba(0,0,0,.35);
+transition:.4s ease;
+}
+
+.project-card:hover .project-icon{
+transform:scale(1.08) rotate(2deg);
+box-shadow:0 15px 35px rgba(34,211,238,.18);
+}
+
+.live-badge{
+display:inline-flex;
+align-items:center;
+gap:7px;
+padding:7px 11px;
+border-radius:30px;
+font-size:10px;
+font-weight:800;
+letter-spacing:.6px;
+color:#67e8f9;
+background:rgba(34,211,238,.08);
+border:1px solid rgba(34,211,238,.2);
+white-space:nowrap;
+}
+
+.live-dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:#22d3ee;
+box-shadow:0 0 10px rgba(34,211,238,.8);
+animation:livePulse 1.7s infinite;
+}
+
+@keyframes livePulse{
+0%,100%{opacity:1;transform:scale(1);}
+50%{opacity:.45;transform:scale(.7);}
+}
+
+.project-category{
+display:inline-block;
+width:max-content;
+padding:6px 11px;
+margin-bottom:13px;
+border-radius:20px;
+font-size:11px;
+font-weight:700;
+letter-spacing:.7px;
+color:#94a3b8;
+background:rgba(148,163,184,.08);
+border:1px solid rgba(148,163,184,.12);
+}
+
+.project-card h3{
+font-size:23px;
+line-height:1.3;
+margin-bottom:12px;
+font-weight:800;
+color:#fff;
+}
+
+.project-card p{
+font-size:14px;
+line-height:1.75;
+color:#94a3b8;
+margin-bottom:25px;
+}
+
+.project-footer{
+margin-top:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.06);
+}
+
+.play-store{
+display:flex;
+align-items:center;
+gap:8px;
+color:#94a3b8;
+font-size:12px;
+font-weight:600;
+}
+
+.play-icon{
+width:20px;
+height:20px;
+display:block;
+}
+
+.project-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:11px 17px;
+border-radius:12px;
+background:#22d3ee;
+color:#020617;
+text-decoration:none;
+font-size:12px;
+font-weight:800;
+transition:.3s ease;
+}
+
+.project-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(34,211,238,.28);
+}
+
+.project-number{
+position:absolute;
+bottom:20px;
+right:25px;
+font-size:12px;
+font-weight:800;
+color:rgba(255,255,255,.08);
+}
+
+@media(max-width:1050px){
+.projects-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:650px){
+.projects-grid{grid-template-columns:1fr;}
+.project-card{min-height:450px;}
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+text-align:center;
+padding:50px 30px;
+background:linear-gradient(135deg,#0f172a,#111827);
+border-radius:28px;
+border:1px solid rgba(255,255,255,.06);
+}
+
+.contact-box h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.contact-box p{
+color:#cbd5e1;
+margin:10px 0;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+padding:30px 0;
+text-align:center;
+color:#64748b;
+border-top:1px solid rgba(255,255,255,.06);
+margin-top:50px;
+font-size:14px;
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:980px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.btns{
+justify-content:center;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
 .about-wrap{
 grid-template-columns:1fr;
 text-align:center;
 }
+
+.about-content{
+text-align:left;
 }
+
+}
+
+@media(max-width:600px){
+
+.container{
+padding:0 18px;
+}
+
+.hero{
+padding-top:30px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.hero-img img{
+width:260px;
+}
+
+.about-img img{
+width:250px;
+}
+
+nav ul{
+gap:12px;
+}
+
+nav a{
+font-size:13px;
+}
+
+}
+
+/* ================= SMALL SCREEN PROJECT FIX ================= */
+
+@media(max-width:500px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:24px;
+}
+
+}
+
+/* ================= PREMIUM SCROLL OFFSET ================= */
+
+section{
+scroll-margin-top:90px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
+<!-- ================= NAVBAR ================= -->
+
 <nav>
-<div class="logo">MR ANEES PORTFOLIO</div>
+
+<div class="logo">
+MR ANEES PORTFOLIO
+</div>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#skills">Skills</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
 </ul>
+
 </nav>
 
-<!-- HERO -->
+<!-- ================= HOME / HERO ================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
 <div>
 
-<div class="tag">ANDROID DEVELOPER • ENTREPRENEUR</div>
+<div class="tag">
+ANDROID DEVELOPER • ENTREPRENEUR
+</div>
 
-<h1>Building <span>Premium Apps</span> & Digital Solutions</h1>
+<h1>
+Building <span>Premium Apps</span> & Digital Solutions
+</h1>
 
 <p>
-I’m Syed Anees Ul Hasnain — Android Developer focused on world-class mobile apps, UI/UX design, Google Play publishing, and scalable digital products.
+I'm Syed Anees Ul Hasnain — an Android Developer focused on building modern mobile applications, polished UI/UX experiences, digital products, and scalable solutions for real-world users.
 </p>
 
 <div class="btns">
 
-<a href="#projects" class="btn primary">View Projects</a>
+<a href="#projects" class="btn primary">
+View Projects
+</a>
 
-<a href="https://www.linkedin.com/in/syedaneesulhussnain" target="_blank" class="btn secondary">LinkedIn</a>
+<a
+href="https://www.linkedin.com/in/syedaneesulhussnain"
+target="_blank"
+class="btn secondary">
+LinkedIn </a>
 
-<a href="#contact" class="btn secondary">Hire Me</a>
+<a href="#contact" class="btn secondary">
+Hire Me
+</a>
 
 </div>
 
 </div>
 
 <div class="hero-img">
-<img src="profile.png">
+
+<img
+src="profile.png"
+alt="Syed Anees Ul Hasnain">
+
 </div>
 
 </section>
 
-<!-- ABOUT -->
-
-<!-- ABOUT SECTION replace karo is code se -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">
+About Me
+</h2>
 
 <div class="about-wrap">
 
 <div class="about-img">
-<img src="about.jpg" alt="About Anees">
+
+<img
+src="about.jpg"
+alt="About Syed Anees Ul Hasnain">
+
 </div>
 
 <div class="about-content">
 
 <p class="section-sub">
-Computer Science graduate passionate about creating useful mobile apps and business solutions. Experienced in Java, Kotlin, Firebase, APIs, monetization, growth strategy, branding, and Play Store optimization.
+
+Computer Science graduate passionate about creating useful mobile applications and practical digital solutions. I work with Java, Kotlin, Firebase, APIs, modern Android development, monetization, branding, and Google Play publishing.
+
 </p>
 
 <p class="section-sub">
-I focus on building premium Android apps, modern UI designs, scalable products, and strong digital brands for global opportunities.
+
+My goal is to build premium Android experiences with clean interfaces, reliable functionality, strong product presentation, and scalable ideas that can reach users globally.
+
 </p>
 
 </div>
@@ -443,104 +736,220 @@ I focus on building premium Android apps, modern UI designs, scalable products, 
 
 </section>
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
-<h2 class="section-title">Elite Skills</h2>
+<h2 class="section-title">
+Elite Skills
+</h2>
+
+<p class="section-sub">
+A combination of technical development, product building, design, marketing, and creative skills.
+</p>
 
 <div class="grid">
 
-<div class="card skill">Java</div>
-<div class="card skill">Kotlin</div>
-<div class="card skill">Android Studio</div>
-<div class="card skill">Firebase</div>
-<div class="card skill">SQLite</div>
-<div class="card skill">Material UI</div>
-<div class="card skill">Play Console</div>
-<div class="card skill">Digital Marketing</div>
-<div class="card skill">Photography</div>
-<div class="card skill">Canva Design</div>
-<div class="card skill">Video Editing</div>
-<div class="card skill">Brand Strategy</div>
+<div class="card skill">
+Java
+</div>
+
+<div class="card skill">
+Kotlin
+</div>
+
+<div class="card skill">
+Android Studio
+</div>
+
+<div class="card skill">
+Firebase
+</div>
+
+<div class="card skill">
+SQLite
+</div>
+
+<div class="card skill">
+Material UI
+</div>
+
+<div class="card skill">
+Google Play Console
+</div>
+
+<div class="card skill">
+Digital Marketing
+</div>
+
+<div class="card skill">
+Photography
+</div>
+
+<div class="card skill">
+Canva Design
+</div>
+
+<div class="card skill">
+Video Editing
+</div>
+
+<div class="card skill">
+Brand Strategy
+</div>
 
 </div>
 
 </section>
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-<h2 class="section-title">Published Projects</h2>
+<h2 class="section-title">
+Published Projects
+</h2>
 
-<div class="grid">
+<p class="section-sub">
+A selection of Android applications developed, designed, and published for real-world users.
+</p>
 
-<div class="card project">
+<div class="projects-grid">
 
-<img src="ledger.png">
-
+<div class="project-card">
+<div class="project-top">
+<img src="ledger.png" alt="Digital Ledger" class="project-icon">
+<div class="live-badge"><span class="live-dot"></span>LIVE ON GOOGLE PLAY</div>
+</div>
+<span class="project-category">BUSINESS • FINANCE</span>
 <h3>Digital Ledger</h3>
-
-<p>
-Business ledger app for freelancers and companies with client management, reports and transaction history.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.digitalledger" target="_blank" class="btn primary">View App</a>
-
+<p>A digital accounting and ledger application designed for shops, freelancers, and small businesses to manage clients, transactions, balances, and financial records.</p>
+<div class="project-footer">
+<div class="play-store">
+<svg class="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3.6 2.7 13.4 12 3.6 21.3c-.35-.3-.6-.75-.6-1.3V4c0-.55.25-1 .6-1.3ZM14.4 13l2.7 2.6-10.9 6.3 8.2-8.9Zm0-2L6.2 2.1l10.9 6.3-2.7 2.6Zm1.7 1 3.1-1.8c1-.55-1-.9 0-1.45l-3.1-1.75L13.9 11l2.2 2Z"/></svg>
+Google Play
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.digitalledger" target="_blank" rel="noopener noreferrer" class="project-btn">View App →</a>
+</div>
+<span class="project-number">01</span>
 </div>
 
-<div class="card project">
-
-<img src="status.png">
-
-<h3>Status Saver</h3>
-
-<p>
-Modern WhatsApp status saver app with fast downloads, account switching and elegant UI.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.statussaver" target="_blank" class="btn primary">View App</a>
-
+<div class="project-card">
+<div class="project-top">
+<img src="status.png" alt="NeshaPomi Status Saver" class="project-icon">
+<div class="live-badge"><span class="live-dot"></span>LIVE ON GOOGLE PLAY</div>
+</div>
+<span class="project-category">UTILITY • SOCIAL</span>
+<h3>NeshaPomi Status Saver</h3>
+<p>A modern WhatsApp Status Saver application designed for quickly viewing and saving status photos and videos with a clean and simple user experience.</p>
+<div class="project-footer">
+<div class="play-store">
+<svg class="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3.6 2.7 13.4 12 3.6 21.3c-.35-.3-.6-.75-.6-1.3V4c0-.55.25-1 .6-1.3ZM14.4 13l2.7 2.6-10.9 6.3 8.2-8.9Zm0-2L6.2 2.1l10.9 6.3-2.7 2.6Zm1.7 1 3.1-1.8c1-.55-1-.9 0-1.45l-3.1-1.75L13.9 11l2.2 2Z"/></svg>
+Google Play
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.statussaver" target="_blank" rel="noopener noreferrer" class="project-btn">View App →</a>
+</div>
+<span class="project-number">02</span>
 </div>
 
-<div class="card project">
+<div class="project-card">
+<div class="project-top">
+<img src="game.png" alt="Tap The Mole" class="project-icon">
+<div class="live-badge"><span class="live-dot"></span>LIVE ON GOOGLE PLAY</div>
+</div>
+<span class="project-category">GAME • CASUAL</span>
+<h3>Tap The Mole</h3>
+<p>A fast-paced casual mobile game featuring interactive gameplay, multiple difficulty levels, and an engaging reflex challenge for casual players.</p>
+<div class="project-footer">
+<div class="play-store">
+<svg class="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3.6 2.7 13.4 12 3.6 21.3c-.35-.3-.6-.75-.6-1.3V4c0-.55.25-1 .6-1.3ZM14.4 13l2.7 2.6-10.9 6.3 8.2-8.9Zm0-2L6.2 2.1l10.9 6.3-2.7 2.6Zm1.7 1 3.1-1.8c1-.55-1-.9 0-1.45l-3.1-1.75L13.9 11l2.2 2Z"/></svg>
+Google Play
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.simplegame" target="_blank" rel="noopener noreferrer" class="project-btn">Play Game →</a>
+</div>
+<span class="project-number">03</span>
+</div>
 
-<img src="game.png">
+<div class="project-card">
+<div class="project-top">
+<img src="moonjee.png" alt="MoonJee Hair Saloon" class="project-icon">
+<div class="live-badge"><span class="live-dot"></span>LIVE ON GOOGLE PLAY</div>
+</div>
+<span class="project-category">SALON • BOOKING</span>
+<h3>MoonJee Hair Saloon</h3>
+<p>A modern salon appointment application where customers can explore services, view barbers, check available options, and make appointments conveniently.</p>
+<div class="project-footer">
+<div class="play-store">
+<svg class="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3.6 2.7 13.4 12 3.6 21.3c-.35-.3-.6-.75-.6-1.3V4c0-.55.25-1 .6-1.3ZM14.4 13l2.7 2.6-10.9 6.3 8.2-8.9Zm0-2L6.2 2.1l10.9 6.3-2.7 2.6Zm1.7 1 3.1-1.8c1-.55-1-.9 0-1.45l-3.1-1.75L13.9 11l2.2 2Z"/></svg>
+Google Play
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.moonjeehairsaloon" target="_blank" rel="noopener noreferrer" class="project-btn">View App →</a>
+</div>
+<span class="project-number">04</span>
+</div>
 
-<h3>Tap The Model</h3>
-
-<p>
-Fun and engaging mobile game designed for casual players with interactive gameplay.
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.simplegame" target="_blank" class="btn primary">Play Game</a>
-
+<div class="project-card">
+<div class="project-top">
+<img src="qurux.png" alt="Qurux QR Code Scanner and Generator" class="project-icon">
+<div class="live-badge"><span class="live-dot"></span>LIVE ON GOOGLE PLAY</div>
+</div>
+<span class="project-category">UTILITY • QR TOOLS</span>
+<h3>Qurux QR Scanner</h3>
+<p>A fast and modern QR Code Scanner & Generator designed for scanning QR codes and creating QR codes with a clean, simple, and user-friendly experience.</p>
+<div class="project-footer">
+<div class="play-store">
+<svg class="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3.6 2.7 13.4 12 3.6 21.3c-.35-.3-.6-.75-.6-1.3V4c0-.55.25-1 .6-1.3ZM14.4 13l2.7 2.6-10.9 6.3 8.2-8.9Zm0-2L6.2 2.1l10.9 6.3-2.7 2.6Zm1.7 1 3.1-1.8c1-.55-1-.9 0-1.45l-3.1-1.75L13.9 11l2.2 2Z"/></svg>
+Google Play
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.alsyedsoft.qrmaster" target="_blank" rel="noopener noreferrer" class="project-btn">View App →</a>
+</div>
+<span class="project-number">05</span>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
 <div class="contact-box">
 
-<h2>Let's Build Something Great</h2>
+<h2>
+Let's Build Something Great
+</h2>
 
-<p>Email: aneesulhussnain512@gmail.com</p>
+<p>
+Have an idea, project, or opportunity? Let's connect.
+</p>
 
-<p>Location: Narowal, Pakistan</p>
+<p>
+Email: aneesulhussnain512@gmail.com
+</p>
 
-<p>LinkedIn: www.linkedin.com/in/syedaneesulhussnain</p>
+<p>
+Location: Narowal, Pakistan
+</p>
 
-<div class="btns" style="justify-content:center;margin-top:25px;">
+<p>
+LinkedIn: www.linkedin.com/in/syedaneesulhussnain
+</p>
 
-<a href="mailto:aneesulhussnain512@gmail.com" class="btn primary">Email Me</a>
+<div
+class="btns"
+style="justify-content:center;margin-top:25px;">
 
-<a href="https://www.linkedin.com/in/syedaneesulhussnain" target="_blank" class="btn secondary">LinkedIn</a>
+<a
+href="mailto:aneesulhussnain512@gmail.com"
+class="btn primary">
+Email Me </a>
+
+<a
+href="https://www.linkedin.com/in/syedaneesulhussnain"
+target="_blank"
+class="btn secondary">
+LinkedIn </a>
 
 </div>
 
@@ -548,11 +957,15 @@ Fun and engaging mobile game designed for casual players with interactive gamepl
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
 © 2026 Syed Anees Ul Hasnain • Crafted For Global Opportunities
+
 </footer>
 
 </div>
 
 </body>
-</html> 
+</html>
